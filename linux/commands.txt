@@ -3,4 +3,11 @@ ls - list files
 cd - Change directory
 mkdir - Create a directory
 touch - Create a file
+cat - display content of a file
+nano - Open a file in the nano text editor
+mv - Move or rename file or directory
+cp - copy a file or directory
+rm - remove a file or directory
+clear - clear the terminal screen
+history - Display previously executed commands.
 
