@@ -1,6 +1,0 @@
-pwd - print current directory
-ls - List files
-cd - Change directory
-mkdir - make or create directory
-touch - Create a file
-
