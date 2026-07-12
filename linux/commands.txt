@@ -1,0 +1,6 @@
+pwd - Print current working directory
+ls - list files
+cd - Change directory
+mkdir - Create a directory
+touch - Create a file
+
