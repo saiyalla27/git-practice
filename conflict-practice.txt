@@ -1,0 +1,2 @@
+Favorite color: blue
+Practice note: this line will remain unchanged.
