@@ -1,2 +1,2 @@
-Favorite color: blue
+Favorite color: Red
 Practice note: this line will remain unchanged.
