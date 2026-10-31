@@ -1,0 +1,22 @@
+name: First GitHub Actions workflow
+
+on:
+  push:
+    branches:
+      - github-actions-practice
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Print a message
+        run: echo "GitHub Actions workflow ran successfully"
+        
