@@ -1,9 +1,10 @@
-name: First GitHub Actions workflow
+name: Repository file check
 
 on:
   push:
     branches:
-      - github-actions-practice
+      - github-actions-file-check
+      - main
   pull_request:
     branches:
       - main
@@ -12,11 +13,14 @@ permissions:
   contents: read
 
 jobs:
-  hello:
+  repository-check:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
-      - name: Print a message
-        run: echo "GitHub Actions workflow ran successfully"
-        
+
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f .gitignore
+          echo "Required repository files are present."
