@@ -1,6 +1,7 @@
 name: Repository file check
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - github-actions-file-check
