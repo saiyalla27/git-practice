@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - github-actions-file-check
+      - github-actions-shellcheck
       - main
   pull_request:
     branches:
@@ -19,6 +19,14 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes shellcheck
+
+      - name: Check Bash scripts with ShellCheck
+        run: shellcheck bash/*.sh
 
       - name: Check required files
         run: |
