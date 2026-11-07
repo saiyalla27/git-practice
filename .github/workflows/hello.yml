@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - github-actions-shellcheck
+      - service-health-check
       - main
   pull_request:
     branches:
@@ -27,6 +28,9 @@ jobs:
 
       - name: Check Bash scripts with ShellCheck
         run: shellcheck bash/*.sh
+
+      - name: Run service health check
+        run: bash bash/service_health_check.sh https://example.com
 
       - name: Check required files
         run: |
