@@ -5,6 +5,7 @@ on:
     branches:
       - github-pages-actions-deploy
       - github-pages-manual
+      - github-pages-post-deploy-check
   workflow_dispatch:
 
 permissions:
