@@ -48,3 +48,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published pages
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          site_url="${SITE_URL%/}"
+          bash bash/service_health_check.sh "$site_url/"
+          bash bash/service_health_check.sh "$site_url/project-updates.html"
